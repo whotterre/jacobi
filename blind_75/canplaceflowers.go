@@ -8,7 +8,7 @@ func canPlaceFlowers(flowerbed []int, n int) bool {
 		if flowerbed[i] == 0 {
       // Check it's adjacent elements - left and right
 			leftEmpty := (i == 0) || (flowerbed[i - 1] == 0)
-      rightEmpty := (i == len(flowerbed) - 1:) || (flowerbed[i + 1] == 0)
+      rightEmpty := (i == len(flowerbed) - 1) || (flowerbed[i + 1] == 0)
       // Place a flower if only the right and left are empty
 			if leftEmpty && rightEmpty {
 				flowerbed[i] = 1
