@@ -64,11 +64,11 @@ func (ll *LinkedList) ReverseList() *LinkedListNode {
 	}
 	return prev
 }
-func main(){
-	list := &LinkedList{}
-	list.AddToHead(10)
-	list.AddToHead(20)
-	list.AddToHead(30)
+// func main(){
+// 	list := &LinkedList{}
+// 	list.AddToHead(10)
+// 	list.AddToHead(20)
+// 	list.AddToHead(30)
 
-	list.PrintList()
-}
+// 	list.PrintList()
+// }
