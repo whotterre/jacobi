@@ -23,6 +23,3 @@ func TowersOfHanoi(n int) {
 	TOH(n, "A", "C", "B")
 }
 
-func main() {
-	TowersOfHanoi(3)
-}
