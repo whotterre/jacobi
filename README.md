@@ -13,7 +13,7 @@ This repo features:
 
 ## 📚 Origin
 
-Originally created as part of a school project involving numerical methods (like the ** Gauss Jacobi method** for solving linear systems), this repo has evolved into a personal archive of useful algorithms and implementations.
+Originally created as part of a school project involving numerical methods (like the Gauss Jacobi method for solving linear systems), this repo has evolved into a personal archive of useful algorithms and implementations.
 
 ## 📂 Structure
 
