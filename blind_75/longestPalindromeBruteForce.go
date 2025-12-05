@@ -1,3 +1,5 @@
+package main
+
 func longestPalindrome(s string) string {
    // Keep count of max 
    maxLength := 0
@@ -39,9 +41,3 @@ func isPalindrome(s string) bool {
     return true
 }
 
-func max(a, b int) int {
-    if a > b {
-        return a
-    }
-    return b
-}

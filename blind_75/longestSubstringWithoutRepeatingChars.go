@@ -1,3 +1,5 @@
+package main
+
 func lengthOfLongestSubstring(s string) int {
 	n := len(s)
 	if n == 0 {
@@ -21,9 +23,3 @@ func lengthOfLongestSubstring(s string) int {
     return maxLength
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
