@@ -17,6 +17,7 @@ func evalRPN(tokens []string) int {
             stack = append(stack, num)
         } else {
             a := stack[len(stack) - 2]
+			b := stack[len(stack) - 1]
             stack = stack[:len(stack) - 2]
             res := evaluateOperation(a, b, curr)
             stack = append(stack, res)
