@@ -35,10 +35,3 @@ func longestOnes(nums []int, k int) int {
 	return maxLength
 }
 
-// The n-th max function i've written atp 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

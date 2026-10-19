@@ -3,7 +3,7 @@ func maxPrimes(n int, s int) []int {
     var res []int
     acc := 0
     primes := primeSieve(n)
-    for i := 0; i < len(primes); i++ {
+    for i := range primes {
         if acc + primes[i] <= s {
             acc += primes[i]
             res = append(res, primes[i])

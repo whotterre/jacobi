@@ -25,10 +25,3 @@ func generateBinaryStrings(n int, A []int, i int) {
 	generateBinaryStrings(n, A, i+1)
 }
 
-func main() {
-    n := 12 // The desired length of the binary strings
-    // Initialize a slice of integers with length 'n'
-    // All elements will be initialized to their zero value (0 for int)
-    A := make([]int, n)
-    generateBinaryStrings(n, A, 0) // Start generating from the first position (index 0)
-}
