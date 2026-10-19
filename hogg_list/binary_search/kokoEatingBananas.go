@@ -2,7 +2,6 @@ package main
 
 // Brute force approach
 func minEatingSpeed(piles []int, h int) int {
-
 	//    initialize a var for cost, at 0
 	//    iterate through the interval, [1, max(p)], with var k,
 	//    iterate through the piles array, trying k in piles[i],
@@ -10,20 +9,26 @@ func minEatingSpeed(piles []int, h int) int {
 	//    at the end of each iter, cost = min(cost, currentCost)
 	//    return cost
 	//    O(max(p) * len(p)) = infeasible for these constraints
-	//    Optimize: with binary search
+	//    Optimize: with binary search over the interval [1, max(p)] reducing the TC to O(log(p) * len(p))
 
 	upper := getMax(piles)
-	for k := 1; k <= upper; k++ {
+	l, r := 1, upper
+	ans := upper 
+	for l <= r {
+		k := l + (r - l) / 2
 		currentCost := 0
 		for i := range piles {
-			currentCost += (piles[i] + k - 1) / k
+			currentCost += ceil(piles[i], k)
 		}
 
 		if currentCost <= h {
-			return k
+			ans = k
+			r = k - 1
+		} else {
+			l = k + 1
 		}
 	}
-	return upper
+	return ans
 }
 
 func getMax(arr []int) int {
@@ -34,4 +39,9 @@ func getMax(arr []int) int {
 		}
 	}
 	return maxVal
+}
+
+// For cleaner code, and understandability, this computes ceiling divisor of a by b
+func ceil(a, b int) int {
+    return (a + b - 1) / b
 }
